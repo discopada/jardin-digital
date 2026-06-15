@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La música como arquitectura de la escena</title>
+    
+    <!-- Importamos la tipografía de máquina de escribir desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Hacemos que el scroll sea suave */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Estilos Generales basados en el boceto */
+        body {
+            font-family: 'Courier Prime', monospace;
+            background-color: #ffffff;
+            color: #000000;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Cabecera de la Web */
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            max-width: 800px;
+        }
+
+        header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 0 0 10px 0;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 14px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        /* Grilla Principal (Configurada a 3 columnas en pantallas grandes) */
+        .jardin-grilla {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 50px 30px;
+            max-width: 950px;
+            width: 100%;
+        }
+
+        /* Bloque de cada Película */
+        .pelicula-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Contenedor del Póster: Rectangular vertical */
+        .poster-contenedor {
+            width: 100%;
+            max-width: 260px; 
+            aspect-ratio: 2 / 3; 
+            margin-bottom: 15px;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+
+        .poster-contenedor img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+
+        /* Bloque Negro con Letras Blancas */
+        .info-bloque-negro {
+            background-color: #000000;
+            color: #ffffff;
+            width: 100%;
+            max-width: 260px;
+            padding: 12px 8px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .info-bloque-negro h2 {
+            font-size: 14px;
+            margin: 0 0 5px 0;
+            font-weight: 700;
+        }
+
+        .info-bloque-negro p {
+            font-size: 12px;
+            margin: 0;
+        }
+
+        /* Texto de análisis de abajo */
+        .analisis-texto {
+            font-size: 13px;
+            line-height: 1.5;
+            max-width: 260px;
+            text-align: center;
+            white-space: pre-line;
+        }
+
+        /* Botón Volver Arriba (Fijo abajo a la derecha) */
+        .btn-volver-arriba {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #000000;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 10px 15px;
+            border: 1px solid #000000;
+            text-transform: uppercase;
+            box-shadow: 2px 2px 0px #000000;
+            transition: all 0.2s ease;
+            z-index: 1000;
+        }
+
+        .btn-volver-arriba:hover {
+            background-color: #ffffff;
+            color: #000000;
+            box-shadow: 0px 0px 0px #000000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Ancla para volver al inicio -->
+    <div id="inicio"></div>
+
+    <header>
+        <h1>La música como arquitectura de la escena</h1>
+        <p>Bitácora digital sobre canciones que construyen cine</p>
+    </header>
+
+    <main class="jardin-grilla">
+
+        <!-- 1. BLACK PHONE 2 -->
+        <article class="pelicula-item">
+            <div class="poster-contenedor">
+                <img src="black-phone-2.jpg" alt="Black Phone 2 Poster"> 
+            </div>
+            <div class="info-bloque-negro">
+                <h2>BLACK PHONE 2</h2>
+                <p>2025 — SCOTT DERRICKSON</p>
+            </div>
+            <div class="analisis-texto">
+                La secuela expande el universo de terror sobrenatural donde el trauma infantil y las llamadas del más allá sirven como herramientas de supervivencia frente a la violencia sistemática.
+
+                La incorporación de "Another Brick in the Wall Pt. 1" de Pink Floyd genera una atmósfera claustrofóbica. El pulso repetitivo y denso del bajo acentúa la sensación de aislamiento de las víctimas, otorgando un peso tangible al encierro físico y mental.
+
+                Dato: El tema pertenece al álbum conceptual 'The Wall' (1979), obra dedicada por completo a explorar los muros emocionales y el aislamiento social.
+            </div>
+        </article>
+
+        <!-- 2. CHRISTINE -->
+        <article class="pelicula-item">
+            <div class="poster-contenedor">
+                <img src="christine.jpg" alt="Christine Poster">
+            </div>
+            <div class="info-bloque-negro">
+                <h2>CHRISTINE</h2>
+                <p>1983 — JOHN CARPENTER</p>
+            </div>
+            <div class="analisis-texto">
+                Un joven alienado y marginado desarrolla una obsesión enfermiza tras restaurar un Plymouth Fury de 1958. El vehículo posee una naturaleza malévola y antropomórfica que consume la identidad de su dueño.
+
+                "Bad to the Bone" de George Thorogood suena de manera diegética a través de la radio para consolidar la presencia del auto. La música no funciona como un simple fondo; le otorga voz, carácter y una actitud amenazante al metal, convirtiendo al objeto en el verdadero antagonista.
+
+                Dato: Aunque evoca el sonido clásico de los años cincuenta, el tema fue lanzado en 1982 y su riff principal se inspira directamente en el blues de Muddy Waters.
+            </div>
+        </article>
+
+        <!-- 3. GULP! EL INFIERNO ESTÁ ENCANTADOR -->
+        <article class="pelicula-item">
+            <div class="poster-contenedor">
+                <img src="gulp.jpg" alt="Gulp Poster">
+            </div>
+            <div class="info-bloque-negro">
+                <h2>GULP! EL INFIERNO ESTÁ ENCANTADOR</h2>
+                <p>2025</p>
+            </div>
+            <div class="analisis-texto">
+                Un registro audiovisual que indaga en los márgenes, la contracultura y la energía inicial que dio forma definitiva al rock independiente argentino.
+
+                "El infierno está encantador esta noche" de Los Redondos se apropia del espacio visual para estructurar la mística colectiva. La base rítmica y las guitarras afiladas sumergen al espectador en una atmósfera de catarsis y peligro inminente, capturando la tensión propia del pogo.
+
+                Dato: Es una de las composiciones fundamentales de 'Gulp!' (1985), el álbum debut de Patricio Rey y sus Redonditos de Ricota, registrado de forma autogestionada.
+            </div>
+        </article>
+
+        <!-- 4. ONE BATTLE AFTER ANOTHER -->
+        <article class="pelicula-item">
+            <div class="poster-contenedor">
+                <img src="one-battle.jpg" alt="One Battle After Another Poster">
+            </div>
+            <div class="info-bloque-negro">
+                <h2>ONE BATTLE AFTER ANOTHER</h2>
+                <p>2025</p>
+            </div>
+            <div class="analisis-texto">
+                Un relato dramático estructurado a partir de dinámicas de poder institucionales, donde las estrategias de resistencia y los conflictos de intereses quiebran los lazos cotidianos.
+
+                "Dirty Work" de Steely Dan interviene la tensión de la secuencia mediante un marcado contraste tonal. Los acordes suaves de piano y los arreglos de viento proponen una superficie de tranquilidad urbana que vuelve la hostilidad subyacente mucho más cínica y evidente.
+
+                Dato: La canción presenta la voz principal de David Palmer en lugar del líder habitual Donald Fagen, exponiendo en su lírica la metáfora de realizar las tareas complejas de otros.
+            </div>
+        </article>
+
+        <!-- 5. NO OTHER CHOICE -->
+        <article class="pelicula-item">
+            <div class="poster-contenedor">
+                <img src="no-other-choice.jpg" alt="No Other Choice Poster">
+            </div>
+            <div class="info-bloque-negro">
+                <h2>NO OTHER CHOICE</h2>
+                <p>2025</p>
+            </div>
+            <div class="analisis-texto">
+                Un drama intimista centrado en el dilema de un solo protagonista, quien se encuentra acorralado por las circunstancias y es forzado a tomar una decisión límite sin margen de retorno.
+
+                La composición "Redpepper Dragonfly" de Cho Yong Pil introduce una carga melancólica que altera la percepción del encuadre. El uso de sintetizadores junto a texturas tradicionales coreanas sostiene el peso existencial y la inevitabilidad del camino elegido.
+
+                Dato: Cho Yong Pil es una figura clave en la transición cultural coreana de los años ochenta, logrando unificar las raíces locales con el pop contemporáneo.
+            </div>
+        </article>
+
+        <!-- 6. BLUE VELVET -->
+        <article class="pelicula-item">
+            <div class="poster-contenedor">
+                <img src="blue-velvet.jpg" alt="Blue Velvet Poster">
+            </div>
+            <div class="info-bloque-negro">
+                <h2>BLUE VELVET</h2>
+                <p>1986 — DAVID LYNCH</p>
+            </div>
+            <div class="analisis-texto">
+                El hallazgo de una oreja humana en un descampado arrastra a un joven universitario fuera de la monotonía suburbana, sumergiéndolo en una red clandestina de voyeurismo, extorsión y psicopatía.
+
+                David Lynch recurre a "In Dreams" de Roy Orbison durante la secuencia de playback de Ben para moldear una atmósfera de pesadilla. La disonancia entre la dulzura de la balada melancólica y la conducta violenta e impredecible de Frank Booth desarticula la inocencia del tema, transformándolo en puro terror psicológico.
+
+                Dato: Roy Orbison manifestó su asombro inicial ante el uso tan lúgubre que se le dio a su obra, aunque el impacto del film revitalizó su carrera a fines de los ochenta.
+            </div>
+        </article>
+
+        <!-- 7. CASINO -->
+        <article class="pelicula-item">
+            <div class="poster-contenedor">
+                <img src="casino.jpg" alt="Casino Poster">
+            </div>
+            <div class="info-bloque-negro">
+                <h2>CASINO</h2>
+                <p>1995 — MARTIN SCORSESE</p>
+            </div>
+            <div class="analisis-texto">
+                La crónica del ascenso y la inevitable caída de un estratega de apuestas enviado por la mafia para operar los principales casinos de Las Vegas, donde la codicia y la traición institucional terminan por destruir su imperio.
+
+                En el clímax del film, la irrupción de "House of the Rising Sun" de The Animals acompaña el desmoronamiento estructural. La progresión del órgano Hammond y los acordes de guitarra dictan el ritmo del montaje en la secuencia de ejecuciones, transformando la violencia en un lamento fúnebre.
+
+                Dato: Es una pieza folk tradicional estadounidense sobre la ruina moral. La versión de 1964 de The Animals la consolidó como un estándar del rock global.
+            </div>
+        </article>
+
+        <!-- 8. DONNIE DARKO -->
+        <article class="pelicula-item">
+            <div class="poster-contenedor">
+                <img src="donnie-darko.jpg" alt="Donnie Darko Poster">
+            </div>
+            <div class="info-bloque-negro">
+                <h2>DONNIE DARKO</h2>
+                <p>2001 — RICHARD KELLY</p>
+            </div>
+            <div class="analisis-texto">
+                Un adolescente complejo sobrevive a un accidente insólito y comienza a experimentar alucinaciones con una figura antropomórfica que vaticina el fin del mundo, empujándolo a través de crisis existenciales y dinámicas temporales.
+
+                La secuencia de ingreso a la escuela secundaria está planificada con precisión matemática sobre "Head Over Heels" de Tears for Fears. El uso de la cámara lenta y los movimientos coreografiados de los estudiantes exponen la alienación y la estructura social del entorno sin necesidad de diálogos.
+
+                Dato: Lanzada en 1985, el director Richard Kelly utilizó el tema de fondo de manera diegética en el set para que el elenco ajustara sus acciones al tempo exacto de la música.
+            </div>
+        </article>
+
+        <!-- 9. MARIE ANTOINETTE -->
+        <article class="pelicula-item">
+            <div class="poster-contenedor">
+                <img src="marie-antoinette.jpg" alt="Marie Antoinette Poster">
+            </div>
+            <div class="info-bloque-negro">
+                <h2>MARIE ANTOINETTE</h2>
+                <p>2006 — SOFIA COPPOLA</p>
+            </div>
+            <div class="analisis-texto">
+                Un retrato contemporáneo y estilizado de la joven delfina de Francia, enfocándose en el aislamiento, la opulencia asfixiante de la corte de Versalles y los mecanismos de evasión juvenil frente a la responsabilidad histórica.
+
+                Sofia Coppola musicaliza la celebración del decimoctavo cumpleaños empleando "Ceremony" de New Order. El pulso melódico del bajo y las guitarras distorsionadas irrumpen en el amanecer clásico de Versalles, operando como un puente anacrónico que traduce la apatía de la corte al lenguaje del post-punk.
+
+                Dato: Es una pieza histórica por ser la última composición de Joy Division previa al fallecimiento de Ian Curtis, convirtiéndose luego en el sencillo debut de New Order.
+            </div>
+        </article>
+
+        <!-- 10. FRANCES HA -->
+        <article class="pelicula-item">
+            <div class="poster-contenedor">
+                <img src="frances-ha.jpg" alt="Frances Ha Poster">
+            </div>
+            <div class="info-bloque-negro">
+                <h2>FRANCES HA</h2>
+                <p>2012 — NOAH BAUMBACH</p>
+            </div>
+            <div class="analisis-texto">
+                Una bailarina de veintisiete años transita por Nueva York sin una carrera estable ni una residencia fija, lidiando con la madurez y la distancia progresiva que toma respecto a su círculo de amistades.
+
+                La secuencia donde Frances corre y salta por las calles se articula íntegramente a partir de "Modern Love" de David Bowie. El ritmo del piano y las palmas determinan la cadencia de sus movimientos, traduciendo visualmente su obstinado optimismo frente a la incertidumbre.
+
+                Dato: Esta escena constituye un homenaje directo a la película francesa "Mala Sangre" (1986) de Leos Carax, donde el protagonista realiza una acción idéntica bajo la misma composición.
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Botón flotante -->
+    <a href="#inicio" class="btn-volver-arriba" title="Volver arriba">↑</a>
+
+</body>
+</html>
